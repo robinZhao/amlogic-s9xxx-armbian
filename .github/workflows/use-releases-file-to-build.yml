@@ -12,9 +12,10 @@ on:
       set_release:
         description: "Select OS Release."
         required: false
-        default: "jammy"
+        default: "focal"
         type: choice
         options:
+          - focal
           - jammy
           - noble
           - bullseye
