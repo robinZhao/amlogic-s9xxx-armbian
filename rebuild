@@ -1145,10 +1145,11 @@ loop_rebuild() {
             esac
 
             i="1"
+            echo -e  "KERNEL_TAGS ${KERNEL_TAGS}"
             for k in "${kernel_list[@]}"; do
                 {
                     kernel="${k}"
-
+                    echo  -e "kernel ${kernel}"
                     # Skip inapplicable kernels
                     if [[ "${KERNEL_TAGS}" =~ ^[1-9].[0-9]+ ]]; then
                         [[ "${kernel}" != "$(echo ${KERNEL_TAGS} | awk -F'.' '{print $1"."$2"."}')"* ]] && {
