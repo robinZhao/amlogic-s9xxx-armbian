@@ -221,12 +221,13 @@ on:
       builder_name:
         description: "Set Armbian builder signature."
         required: false
-        default: "ophub"
+        default: "robin"
         type: choice
         options:
           - ophub
           - angel
           - yourname
+          - robin
 
 env:
   TZ: America/New_York
